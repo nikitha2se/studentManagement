@@ -1,0 +1,20 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>  
+</div>
+ <div class="w3-container" >
+    <div class="w3-panel w3-round-small w3-teal">
+        <h3>Max: {{this.maxGrade }}
+				</h3>
+				<h3>Min: {{this.minGrade }}</h3>
+				<h3>Average:  {{ this.avgGrade}}</h3>
+				<h5>** Note: Students with grades less than 65 are marked as RED. </h5>
+			</div>
+			
+</div>  
+<div class="container-fluid">
+<ng2-smart-table style='font-size:110%; border:"1"'   (deleteConfirm)="onDeleteConfirm($event)"
+    (editConfirm)="onSaveConfirm($event)"
+    (createConfirm)="onCreateConfirm($event)" [settings]="settings" [source]="source"  ></ng2-smart-table>
+</div>
